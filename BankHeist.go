@@ -17,13 +17,16 @@ func main() {
 	} else {
 		isHeistOn = false
 		fmt.Println("Plan a better disguise next time?")
+		fmt.Println("EludedGuards has a value of", eludedGuards)
 	}
 	openedVault := rand.Intn(100)
 	if isHeistOn == true && openedVault >= 70 {
 		fmt.Println("Grab and Go!")
+		fmt.Println("EludedGuards has a value of", openedVault)
 	} else if isHeistOn == true && openedVault < 70 {
 		isHeistOn = false
 		fmt.Println("Vault can't be opened!")
+		fmt.Println("EludedGuards has a value of", openedVault)
 	}
 	leftSafety := rand.Intn(5)
 	if isHeistOn {
